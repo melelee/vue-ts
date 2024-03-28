@@ -4,6 +4,7 @@ import ComputedDemo from "@/components/ComputedDemo.vue";
 import WatchDemo from "@/components/WatchDemo.vue";
 import WatchReactive from "@/components/WatchReactive.vue";
 import RefDemo from "@/components/RefDemo.vue";
+import UserList from "@/components/UserList.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import RefDemo from "@/components/RefDemo.vue";
   <WatchReactive></WatchReactive>
   <hr>
   <RefDemo></RefDemo>
+  <UserList></UserList>
 </template>
 
 <style scoped>
