@@ -1,19 +1,38 @@
 <script setup lang="ts">
-let props = defineProps(["desc", "user"]);
-console.log(props)
-console.log(props.desc)
-console.log(props.user)
+import type {User, Users} from "@/types";
+
+
+//仅接收
+// let props = defineProps(["desc", "user"]);
+
+
+//接收，限制传入值类型，并用？添加可选
+// const props = defineProps<{
+//   desc?: string,
+//   user: User
+// }>()
+
+//接收，限制传入值类型，并用？添加可选，并添加默认
+withDefaults(
+    defineProps<{
+      desc?: string,
+      user?: User
+    }>(),
+    {
+      desc: "我是用户详情",
+      user: () => {
+        return {id: 1, name: "wangwu", age: 10}
+      }
+    }
+)
+
 </script>
 
 <template>
-  <span>desc:{{ desc }}</span>
-  <br>
-  <span>用户id：{{ props.user.id }}</span>
-  <span>用户名：{{ props.user.name }}</span>
-  <span>用户年龄：{{ props.user.age }}</span>
+  <h2>{{ desc }}</h2>
+
+  <div>{{ user }}</div>
 
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
