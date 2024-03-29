@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import type {User, Users} from "@/types";
 
+// todo
+// https://cn.vuejs.org/guide/components/props.html#prop-validation
+// https://cn.vuejs.org/guide/typescript/composition-api.html
+
 
 //仅接收
 // let props = defineProps(["desc", "user"]);
