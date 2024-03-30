@@ -11,6 +11,8 @@
     <router-link to="/user" active-class="active">props</router-link>
     <router-link to="/watch" active-class="active">watch</router-link>
     <router-link to="/watch-reactive" active-class="active">watch-reactive</router-link>
+    <router-link :to="{path: '/news'}" active-class="active">多级路由</router-link>
+
   </div>
   <div class="body">
     <router-view></router-view>

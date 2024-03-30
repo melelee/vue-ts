@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
+import {createRouter, createWebHistory} from "vue-router";
 import DogList from "@/pages/DogList.vue";
 import ComputedDemo from "@/pages/ComputedDemo.vue";
 import HelloWord from "@/pages/HelloWord.vue";
@@ -7,6 +7,8 @@ import TypeDemo from "@/pages/TypeDemo.vue";
 import UserList from "@/pages/UserList.vue";
 import WatchDemo from "@/pages/WatchDemo.vue";
 import WatchReactive from "@/pages/WatchReactive.vue";
+import NewsList from "@/pages/NewsList.vue";
+import NewsDetail from "@/pages/NewsDetail.vue";
 
 let router = createRouter({
     // history: createWebHashHistory(),
@@ -43,6 +45,17 @@ let router = createRouter({
         {
             path: "/watch-reactive",
             component: WatchReactive
+        },
+        {
+            name: "news",
+            path: "/news",
+            component: NewsList,
+            children: [
+                {
+                    path: "detail",
+                    component: NewsDetail
+                }
+            ]
         }
     ]
 });
