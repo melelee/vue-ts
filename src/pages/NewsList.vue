@@ -10,9 +10,27 @@ let newsList = reactive([
 </script>
 
 <template>
+
+  <h1>query传值</h1>
   <li v-for="news in newsList" :key="news.id">
-    <router-link to="/news/detail">{{ news.title }}</router-link>
+    <router-link :to="`/news/detail?title=${news.title}`">第一种：{{ news.title }}</router-link>
   </li>
+
+  <li v-for="news in newsList" :key="news.id">
+    <router-link
+        :to="{
+          path:'/news/detail',
+          query:{
+            title:news.title
+          }
+        }"
+    >
+      第二种：{{ news.title }}
+    </router-link>
+  </li>
+
+  <h1>param传值</h1>
+
   <div>
     <router-view></router-view>
   </div>

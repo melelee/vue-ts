@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import {useRoute} from "vue-router";
 
+let route = useRoute();
 </script>
 
 <template>
-111111111111111111111
+  {{ route.query.title }}
 </template>
 
 <style scoped>
