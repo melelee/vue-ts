@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type {User, Users} from "@/types";
+import {onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated} from "vue";
 
 // todo
 // https://cn.vuejs.org/guide/components/props.html#prop-validation
@@ -29,6 +30,28 @@ withDefaults(
       }
     }
 )
+
+onBeforeMount(() => {
+  console.log("挂载前")
+})
+onMounted(() => {
+  console.log("挂在后")
+})
+
+onBeforeUpdate(() => {
+  console.log("更新前")
+})
+onUpdated(() => {
+  console.log("更新后")
+})
+
+
+onBeforeUnmount(() => {
+  console.log("卸载前")
+})
+onUnmounted(() => {
+  console.log("卸载后")
+})
 
 </script>
 
