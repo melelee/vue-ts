@@ -1,12 +1,12 @@
 import {createRouter, createWebHistory} from "vue-router";
-import DogList from "@/components/DogList.vue";
-import ComputedDemo from "@/components/ComputedDemo.vue";
-import HelloWord from "@/components/HelloWord.vue";
-import RefDemo from "@/components/RefDemo.vue";
-import TypeDemo from "@/components/TypeDemo.vue";
-import UserList from "@/components/UserList.vue";
-import WatchDemo from "@/components/WatchDemo.vue";
-import WatchReactive from "@/components/WatchReactive.vue";
+import DogList from "@/pages/DogList.vue";
+import ComputedDemo from "@/pages/ComputedDemo.vue";
+import HelloWord from "@/pages/HelloWord.vue";
+import RefDemo from "@/pages/RefDemo.vue";
+import TypeDemo from "@/pages/TypeDemo.vue";
+import UserList from "@/pages/UserList.vue";
+import WatchDemo from "@/pages/WatchDemo.vue";
+import WatchReactive from "@/pages/WatchReactive.vue";
 
 let router = createRouter({
     history: createWebHistory(),

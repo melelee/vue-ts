@@ -11,7 +11,6 @@
     <router-link to="/user" active-class="active">props</router-link>
     <router-link to="/watch" active-class="active">watch</router-link>
     <router-link to="/watch-reactive" active-class="active">watch-reactive</router-link>
-
   </div>
   <div class="body">
     <router-view></router-view>
