@@ -5,6 +5,7 @@ import WatchDemo from "@/components/WatchDemo.vue";
 import WatchReactive from "@/components/WatchReactive.vue";
 import RefDemo from "@/components/RefDemo.vue";
 import UserList from "@/components/UserList.vue";
+import DogList from "@/components/DogList.vue";
 </script>
 
 <template>
@@ -17,6 +18,10 @@ import UserList from "@/components/UserList.vue";
 <!--  <hr>-->
 <!--  <RefDemo></RefDemo>-->
   <UserList></UserList>
+
+  <hr>
+
+  <DogList></DogList>
 </template>
 
 <style scoped>
