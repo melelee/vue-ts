@@ -8,7 +8,8 @@ import UserList from "@/pages/UserList.vue";
 import WatchDemo from "@/pages/WatchDemo.vue";
 import WatchReactive from "@/pages/WatchReactive.vue";
 import NewsList from "@/pages/NewsList.vue";
-import NewsDetail from "@/pages/NewsDetail.vue";
+import NewsDetailQuery from "@/pages/NewsDetailQuery.vue";
+import NewsDetailParam from "@/pages/NewsDetailParam.vue";
 
 let router = createRouter({
     // history: createWebHashHistory(),
@@ -52,8 +53,13 @@ let router = createRouter({
             component: NewsList,
             children: [
                 {
-                    path: "detail",
-                    component: NewsDetail
+                    path: "query",
+                    component: NewsDetailQuery
+                },
+                {
+                    name:"param-name",
+                    path: "param/:id/:title/:content",
+                    component: NewsDetailParam
                 }
             ]
         }
