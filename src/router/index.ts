@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from "vue-router";
+import {createRouter, createWebHashHistory, createWebHistory} from "vue-router";
 import DogList from "@/pages/DogList.vue";
 import ComputedDemo from "@/pages/ComputedDemo.vue";
 import HelloWord from "@/pages/HelloWord.vue";
@@ -9,6 +9,7 @@ import WatchDemo from "@/pages/WatchDemo.vue";
 import WatchReactive from "@/pages/WatchReactive.vue";
 
 let router = createRouter({
+    // history: createWebHashHistory(),
     history: createWebHistory(),
     routes: [
         {
