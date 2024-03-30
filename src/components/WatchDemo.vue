@@ -9,21 +9,23 @@ let add = function () {
 
 let square = ref(number.value * number.value)
 
-let watch1 = watch(
+let stop = watch(
     number,
     (value, oldValue) => {
+      console.log(value)
+      console.log(oldValue)
       if (value > 10) {
-        watch1()
+        stop()
       }
-      square = value * oldValue
+      square.value = value * value
     },
     {
       // 深度监视
       deep: true,
-      // 立即
+      // 立即 oldValue为undefined
       immediate: true,
       // 一次
-      once: true
+      // once: true
     }
 );
 </script>
