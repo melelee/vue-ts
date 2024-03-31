@@ -12,6 +12,7 @@
     <router-link to="/watch" active-class="active">watch</router-link>
     <router-link to="/watch-reactive" active-class="active">watch-reactive</router-link>
     <router-link :to="{path: '/news'}" active-class="active">多级路由</router-link>
+    <router-link :to="{path: '/car'}" active-class="active">多级路由传值</router-link>
 
   </div>
   <div class="body">
