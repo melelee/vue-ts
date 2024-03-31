@@ -70,8 +70,24 @@ let router = createRouter({
             component: CarList,
             children: [
                 {
-                    path: "detail",
-                    component: CarDetail
+                    name: "car-detail",
+                    path: "detail/:id/:name/:content",
+                    component: CarDetail,
+
+                    // 将路由收到的所有params参数作为props传给路由组件
+                    // props: true,
+
+                    // props: {
+                    //     id: 3,
+                    //     name: "蔚来",
+                    //     content: "换电换电"
+                    // }
+
+                    // 自己决定将什么作为props传给路由组件
+                    // props: route => ({id: 4, name: "理想", content: "又该加油了"})
+                    props: route => (route.params)
+
+
                 }
             ]
         }

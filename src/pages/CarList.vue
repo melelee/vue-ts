@@ -11,8 +11,8 @@ let cars = reactive([{id: 1, name: "小米su7", content: "干翻友商"},
   <ul>
     <li v-for="car in cars" :key="car.id">
       <router-link :to="{
-        path:'/car/detail',
-        query: car
+        name: 'car-detail',
+        params: car
       }" active-class="active">{{ car.name }}</router-link>
     </li>
   </ul>

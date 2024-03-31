@@ -1,16 +1,26 @@
 <script setup lang="ts">
 import {useRoute} from "vue-router";
 
-let route = useRoute();
+//通过路由自行接受
+// let route = useRoute();
 
+defineProps(["id", "name", "content"])
 </script>
 
 <template>
-  <span>{{ route.query.id }}</span>
+<!--  通过路由自行接受-->
+<!--  <span>{{ route.params.id }}</span>-->
+<!--  <br>-->
+<!--  <span>{{ route.params.name }}</span>-->
+<!--  <br>-->
+<!--  <span>{{ route.params.content }}</span>-->
+
+
+  <span>{{ id }}</span>
   <br>
-  <span>{{ route.query.name }}</span>
+  <span>{{ name }}</span>
   <br>
-  <span>{{ route.query.content }}</span>
+  <span>{{ content }}</span>
 </template>
 
 <style scoped>
