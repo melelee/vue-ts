@@ -12,6 +12,7 @@ import NewsDetailQuery from "@/pages/NewsDetailQuery.vue";
 import NewsDetailParam from "@/pages/NewsDetailParam.vue";
 import CarList from "@/pages/CarList.vue";
 import CarDetail from "@/pages/CarDetail.vue";
+import PiniaDemo from "@/pages/PiniaDemo.vue";
 
 let router = createRouter({
     // history: createWebHashHistory(),
@@ -86,13 +87,15 @@ let router = createRouter({
                     // 自己决定将什么作为props传给路由组件
                     // props: route => ({id: 4, name: "理想", content: "又该加油了"})
                     props: route => (route.params)
-
-
                 }
             ]
         },
         {
-            path:"/",
+            path: "/pinia",
+            component: PiniaDemo,
+        },
+        {
+            path: "/",
             redirect: "/car"
         }
     ]
