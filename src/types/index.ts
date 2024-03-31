@@ -7,3 +7,10 @@ export interface User {
 
 // 自定义类型
 export type Users = Array<User>
+
+
+export interface Car {
+    id: number,
+    name: string,
+    content: string
+}
