@@ -90,6 +90,10 @@ let router = createRouter({
 
                 }
             ]
+        },
+        {
+            path:"/",
+            redirect: "/car"
         }
     ]
 });
