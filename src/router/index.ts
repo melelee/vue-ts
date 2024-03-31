@@ -58,7 +58,7 @@ let router = createRouter({
                 },
                 {
                     name:"param-name",
-                    path: "param/:id/:title/:content",
+                    path: "param/:id/:title/:content?",
                     component: NewsDetailParam
                 }
             ]
