@@ -1,18 +1,22 @@
 <script setup lang="ts">
-import {reactive} from "vue";
-import axios from "axios";
-import {nanoid} from "nanoid";
+import {useLoveTalkStore} from "@/store/LoveTalk";
+import {storeToRefs} from "pinia";
 
 
-let talks = reactive([{id: nanoid(), content: "别嫌弃我什么都不会，但是我只会娶你。"}]);
+// let talks = reactive([{id: nanoid(), content: "别嫌弃我什么都不会，但是我只会娶你。"}]);
+let loveTalkStore = useLoveTalkStore();
+
+let {talks} = storeToRefs(loveTalkStore);
+
+
+loveTalkStore.$subscribe((mutation, state) => {
+  console.log("变了变了", mutation);
+  console.log("变了变了", state);
+  localStorage.setItem("talks", JSON.stringify(state.talks))
+})
 
 async function getTalk() {
-  // 两次结构赋值，并重命名
-  let {data: {content: talkContent}} = await axios.get("https://api.uomg.com/api/rand.qinghua?format=json");
-  talks.push({
-    id: nanoid(),
-    content: talkContent
-  });
+  await loveTalkStore.addTalk()
 }
 </script>
 
